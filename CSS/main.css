@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Kameron&display=swap');
+
 body {
     background: white;
+    margin: 1.5em;
+    font-family: 'Kameron', serif;
 }
 
 img {
@@ -7,5 +11,79 @@ img {
 }
 
 .close {
+
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/images/shoe1.jpg);
+    background-size: cover;
+    background-position-x:20%;
+    background-position-y:20%;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    /* overflow: hidden; */
+
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+}
+
+nav {
     display: none;
 }
+
+header {
+    display: flex;
+    justify-content:space-between;
+}
+
+header svg {
+    display: flex;
+    justify-content:space-between;
+    width: 3rem;
+    margin-top: -.6em;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NOTES 
+
+
+/* By default, browsers apply a margin of 16px to the body element 
+
+1em = 16px 
+if you set the value to "em" it changes according to the size if you want to zoom your browser of the
+ screen but if you use px it will not scale down or up
+
+for font-sizes it is better to use rem(relative em) 
+
+you need to have the position set to absolute for the 'top, right, left, bottom" to work'
+
+*/

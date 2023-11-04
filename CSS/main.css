@@ -32,6 +32,7 @@ a {
     width: 100%;
     height: 100vh;
     z-index: -1;
+    animation: introLoad 2s forwards;
     /* overflow: hidden; */
 
 }
@@ -48,11 +49,9 @@ nav {
     background: white;
     height: 100vh;
     width: 50%;
-    z-index: 120;    /*this is to make sure that it is sitting on top of the other elements */
+    z-index: 10000;    /*this is to make sure that it is sitting on top of the other elements */
     text-transform: uppercase;
     transform: translateX(100%);
-    transition: transform .7s ease-in-out; /*a way to specify what type of property should animate from one point to another */
-
 }
 
 nav ul {
@@ -96,6 +95,8 @@ h1 {
 section.hero {
     color: white;
     height: 90vh;
+    animation: moveDown 1s ease-in-out forwards;
+    opacity: 0;
 
 }
 
@@ -104,6 +105,7 @@ section.hero .down-arrow {
     position: absolute;
     bottom: 2em;
     width: 1em;
+    animation: moveArrow 1s alternate-reverse infinite;
 }
 
 section.hero .down-arrow path {
@@ -125,6 +127,19 @@ section.hero .down-arrow path {
 
 .more-info .description {
     line-height: 1.5em;
+}
+
+.open-nav {
+    position: fixed;   /* it means that when i scroll down or up, it does not change it remains fixed*/
+    right: 0;
+    top: 0;
+    background: white;
+    height: 100vh;
+    width: 50%;
+    z-index: 1;    /*this is to make sure that it is sitting on top of the other elements */
+    text-transform: uppercase;
+    transform: translateX(0%);
+    transition: transform .7s ease-in-out; /*a way to specify what type of property should animate from one point to another */
 }
 
 
@@ -194,13 +209,13 @@ section.hero .down-arrow path {
         color: black;
         height: auto;
         width: 40%;
-        margin-bottom: 9em;
+        margin-bottom: 17em;
     }
 
     section.hero .down-arrow {
         stroke: black;
         position: unset;
-        margin-top: 12em;
+        margin-top: 28em;
     }
 
     section.hero .down-arrow path {
@@ -236,10 +251,54 @@ section.hero .down-arrow path {
 }
 
 
+/* design for the desktop screen  */
+
+@media only screen and (min-width: 1200px) {
+
+    .wrapper {
+        width: 1200px;
+        margin: auto 0;
+    }
+
+    .feature {
+        gap: 0;
+    }
+
+}
 
 
+/* for creating the animations */
+@keyframes introLoad {
+    from {
+        clip-path: circle(0.4% at 100% 0);
+    }
 
+    to{
+        clip-path: circle(141.2% at 100% 0);
+    }
+}
 
+@keyframes moveArrow {
+    from {
+        transform: translateY(-30px)
+    }
+
+    to{
+        transform: translateY(0)
+    }
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-100px);
+
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1
+    }
+}
 
 
 

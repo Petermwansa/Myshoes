@@ -15,7 +15,15 @@
 
             <nav>
 
-                                
+
+
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Sneakers</a></li>
+                    <li><a href="">Players</a></li>
+                </ul> 
+
+                                                
                 <svg class="close" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <rect width="64" height="64" fill="url(#pattern0)"/>
                     <defs>
@@ -25,18 +33,9 @@
                     <image id="image0_19_7" width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB4ElEQVR4nO2Zuy5EURSGf41EBHENLaW4TuX6Aho8Ae9AoxEEEZ1E4W0UVK6JhHgEQeEWIRLWyVg5a0Zk5pi99+Qc/5f87V77/+aSWWcAQgghhBBCCCGEEJKYOsm0pCnArFZJd4A5idiWfEouJB0e5/RJbiQfkmGPcxIzj7wAnxIGJLffM94lvR5mVMQiYglXki6HZw+isPyMw7Odsgz3EqLyd0hBeWUF7iQMIWXllVVULiH6krtHCssra/i7hBxSXl5ZR3IJI5IHZKC8soHyJYwiY+WVTZSWMCZ5RAbLK1v4XcI4Ml4+okayg58SJiRPyHh5JZKwi1jCteQFcfnZ6l0tHMUS/sUrX0y/5A2xgDNJfVVvFBC71b0ilrCPfyDBbnXPkknJAmIJB5KGqt3OM3ar0/KKlXAoaQx+O8/Yra64vGIlHEmag93OM3ar+628YiUcS1q8384zdqsrVV6xEk6QYgl2qyu3vGIlnCL/JDhV2K0uaXnFSoh+J6RGgt3q/lpeKZbQVvHtPGO3ukrLK1bCuaTdwZlesFudq/KKlXAp6XR4thOit71uddFnf8TDjCUU/vkS4m+4stmD3/KKlTDlcU5iepB/2JELMGsO+cfutQFmEUIIIYQQQgghhGSTL0DStph1OYXzAAAAAElFTkSuQmCC"/>
                     </defs>
                 </svg>
-
-
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Sneakers</a></li>
-                    <li><a href="">Players</a></li>
-                </ul> 
-                  
-
-                      
-
             </nav>
+
+  
 
             <svg class="menu" viewBox="0 0 75 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_64_4)">
@@ -57,6 +56,7 @@
                 </filter>
                 </defs>
             </svg>
+ 
 
 
         </header>
@@ -110,5 +110,19 @@
         </section>
 
     </div>
+
+    <script>
+        const menu = document.querySelector('.menu')
+        const close = document.querySelector('.close')
+        const nav = document.querySelector('nav')
+
+        menu.addEventListener('click', () =>{
+            nav.classList.add('.open-nav')
+        })
+        
+        close.addEventListener('click', () =>{
+            nav.classList.remove('.open-nav')
+        }) 
+    </script>
 </body>
 </html>

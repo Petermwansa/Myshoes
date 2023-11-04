@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kameron&display=swap');
 
 body {
-    background: blue;
+    background: white;
     margin: 1.5em;
     font-family: 'Kameron', serif;
 }
@@ -40,6 +40,7 @@ a {
 .logo {
     color: white;
     font-weight: bold;
+    font-size: 3rem;
 }
 
 nav {
@@ -60,7 +61,7 @@ nav ul {
     margin-top: 8em;
 }
 
-nav ul li a {
+nav ul a {
     color: black;
     padding: .75em 2em;    
     display: block;        /* padding on a link element will not work until it is display block */
@@ -93,6 +94,7 @@ h1 {
 }
 
 section.hero {
+    margin-top: 20%;
     color: white;
     height: 90vh;
     animation: moveDown 1s ease-in-out forwards;
@@ -215,7 +217,7 @@ section.hero .down-arrow path {
     section.hero .down-arrow {
         stroke: black;
         position: unset;
-        margin-top: 28em;
+        margin-top: 20em;
     }
 
     section.hero .down-arrow path {

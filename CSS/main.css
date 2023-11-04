@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kameron&display=swap');
 
 body {
-    background: white;
+    background: blue;
     margin: 1.5em;
     font-family: 'Kameron', serif;
 }
@@ -60,7 +60,7 @@ nav ul {
     margin-top: 8em;
 }
 
-nav ul a {
+nav ul li a {
     color: black;
     padding: .75em 2em;    
     display: block;        /* padding on a link element will not work until it is display block */
